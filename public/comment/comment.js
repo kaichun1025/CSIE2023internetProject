@@ -3,7 +3,7 @@ const isEmpty = (str) => {
     return (!str || str.trim().length === 0)
 }
 
-const baseURL = 'http://localhost:3000' //for socket.io
+const baseURL = 'https://two023internetproject.onrender.com' //for socket.io
 // let storedComments = getCachedData('storedComments') || []
 let pagenumber = 0
 let lstpagenumber = -1
