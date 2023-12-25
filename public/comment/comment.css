@@ -1,0 +1,304 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+
+}
+
+.outblock {
+    border-left: 5px solid gray;
+    border-right: 5px solid gray;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    min-width: 500px;
+    max-width: 2000px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inblock {
+    background-color: antiquewhite;
+    width: 70%;
+    min-width: 500px;
+    max-width: 600px;
+    border: 3px solid rgb(117, 114, 114);
+    border-radius: 2%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    height: 60%;
+    min-height: 600px;
+    max-height: 900px;
+    background-color: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.comment-section {
+    width: 100%;
+    height: 80%;
+    background-color: none;
+    overflow-y: scroll;
+    /* box-shadow: 0 0 10px #000; */
+}
+
+#seemore {
+    width: 100%;
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.548);
+
+    user-select: none;
+}
+
+#seemore:hover {
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+
+    .username {
+        font-size: 25px;
+        text-align: center;
+        background-color: none;
+    }
+
+    .content {
+        max-width: 400px;
+        word-wrap: break-word;
+        font-size: 27px;
+    }
+}
+
+.remote {
+    .content {
+        margin-left: 20px;
+        margin-right: 80px;
+        color: #eee;
+        background-color: #4179f1;
+
+        &::before {
+            border-right: 10px solid #4179f1;
+            left: -10px;
+        }
+    }
+}
+
+.local {
+    justify-content: flex-end;
+
+    .content {
+        margin-right: 20px;
+        margin-left: 80px;
+        order: -1;
+        background-color: #fff;
+        color: #333;
+
+        &::before {
+            border-left: 10px solid #fff;
+            right: -10px;
+        }
+    }
+}
+
+.remote,
+.local {
+    /* & .content::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    } */
+
+    .content {
+        font-weight: 300;
+        box-shadow: 0 0 10px #888;
+    }
+}
+
+.comment-time {
+    word-wrap: normal;
+    width: 30%;
+    height: 30px;
+    font-size: 18px;
+
+    background-color: none;
+    text-align: left;
+    padding-left: 3px;
+}
+
+.comment-input {
+    background-color: none;
+    width: 500px;
+    height: 20%;
+
+    display: flex;
+    align-items: center;
+}
+
+#enter {
+    width: 90%;
+    height: 45px;
+    font-size: 20px;
+}
+
+#enterbutton {
+    display: inline-block;
+    width: 20%;
+    height: 50px;
+    background-color: #4179f1;
+    transition: 0.3s ease-in;
+    user-select: none;
+}
+
+#enterbutton:hover {
+    background-color: #2565ee;
+    cursor: pointer;
+}
+
+.navibar {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(223, 183, 108);
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.naviblock {
+    width: 70%;
+    height: 100%;
+    background-color: none;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigroup {
+    height: 100%;
+    width: 30%;
+    min-width: 250px;
+    max-width: 450px;
+    background-color: none;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.navibutton {
+    margin: 0;
+    height: 100%;
+    width: 170px;
+    border-radius: 10px;
+    font-size: 30px;
+    transition: 0.3s ease-in;
+    user-select: none;
+}
+
+.navibutton:hover {
+    cursor: pointer;
+    background-color: rgba(224, 155, 26, 0.836);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+
+    transition: 3s ease-in-out;
+
+}
+
+.modal-content {
+    background-color: rgb(223, 183, 108);
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    width: 60%;
+    /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    min-height: 150px;
+
+    user-select: none;
+}
+
+.modal-content p {
+    font-size: 45px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.loader {
+    display: none;
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

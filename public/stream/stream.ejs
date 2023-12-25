@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <title>HLS Player</title>
+</head>
+<body>
+<video id='video' width='500' height='500' onloadstart="this.volume=0.5" controls>
+  Your browser does not support the video tag.
+</video>
+  <script>
+      const video = $('#video')[0]
+      const videoSrc = '<%= videosrc %>'
+      // /stream/sourece_m3u8/video2/output.m3u8
+      if(Hls.isSupported()) {
+        const hls = new Hls()
+
+        hls.loadSource(videoSrc)
+        hls.attachMedia(video)
+        hls.on(Hls.Events.MANIFEST_PARSED , () => {
+          video.play()
+        })
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = videoSrc
+        video.on('loadedmetadata' , () => {
+          video.play()
+        })
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./login/login.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./login/login.js"></script>
+    <title>Regi Page</title>
+</head>
+
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><b id="modal-message"></b></p>
+        </div>
+    </div>
+    <div class="outblock">
+        <div class="inblock">
+            <div class="header">Sign Up</div>
+            <div class="functionbar">
+                <label for="user"><b>UserName</b></label>
+                <input type='text' placeholder="Enter user name" name="user" id='user' required/>
+
+                <label for='psw'><b>Password</b></label>
+                <input type='password' placeholder="Enter password" name="psw" id='psw' required/>
+
+                <label for="pswc"><b>Psw Again</b></label>
+                <input type="password" placeholder="Enter password again" name="pswc" id="pswc" required/>
+            </div>
+            <div class="functionbar">
+                <div class="buttons" id="regibutton">
+                    <h1>註冊</h1>
+                </div>
+                <div class="buttons" id="cancelbutton">
+                    <h1>取消</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>

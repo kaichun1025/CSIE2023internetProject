@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./comment/comment.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="./comment/comment.js"></script>
+    <title>Comment Page</title>
+</head>
+
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><b id="modal-message"></b></p>
+        </div>
+    </div>
+    <div class="navibar">
+        <div class="naviblock">
+            <div class="navigroup">
+                <div class="navibutton" id="toHome"><p><b>主頁</b></p></div>
+                <div class="navibutton" id="toComment"><p><b>留言</b></p></div>
+                <div class="navibutton video-option" id="video1"><p><b>V1</b></p></div>
+                <div class="navibutton video-option" id="video2"><p><b>V2</b></p></div>
+            </div>
+            <div class="navigroup">
+                <div class="navibutton" id="toProfile"><p><b>Profile</b></p></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="outblock">
+        <div class="inblock">
+            <div class="comment-section">
+                <div id="seemore"><b>See more</b></div>
+                <div id="commentboard">
+                    
+                </div>
+            </div>
+            <div class="comment-input">
+                <input type="text" placeholder="Enter your comment" name="enter" id="enter"/>
+                <div id="enterbutton">
+                    <span class="loader"></span>
+                    <p><b>Send</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>

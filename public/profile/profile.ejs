@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./profile/profile.js"></script>
+    <link rel="stylesheet" type="text/css" href="./profile/profile.css">
+    <title>Profile Page</title>
+</head>
+
+<body>
+    <div class="navibar">
+        <div class="naviblock">
+            <div class="navigroup">
+                <div class="navibutton" id="toHome"><p><b>主頁</b></p></div>
+                <div class="navibutton" id="toComment"><p><b>留言</b></p></div>
+            </div>
+            <div class="navigroup">
+                <div class="navibutton" id="toProfile"><p><b>Profile</b></p></div>
+            </div>
+        </div>
+    </div>
+    <div class="outblock">
+        <div class="inblock">
+            <div class="picture">
+                <img src="./profile/picture1.jpg" alt="profile picture"/>
+            </div>
+            <div class="Info">
+                <p><b>User: <%= user.username %></b></p>
+            </div>
+            <div class="button">
+                <p><b>Log Out</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
