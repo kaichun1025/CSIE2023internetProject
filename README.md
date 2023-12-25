@@ -11,15 +11,16 @@
 ## 編譯/執行
 要有node、yarn。
     
-        先 **yarn** 載package，再來就 **yarn server**
+        先 yarn 載package，再來 yarn server
     但照理來說直接來應該執行不了，
-    因為我沒有把 .env包含進壓縮檔，所以連不到mongodb。
+    因為我沒有把 .env 包含進壓縮檔，所以連不到mongodb。
 
-      如果要本地測試，可以去辦一個mongoDB，
-    然後弄一個.env跟server.js同目錄，
-    內容可以參考.env.defaults
+      如果要本地測試，可以先去辦一個mongoDB，
+    然後弄一個.env在server.js同目錄，.env內容可以參考.env.defaults
 
 
 ## PORT 
 預設是3000
 
+## 網址
+https://two023internetproject.onrender.com
