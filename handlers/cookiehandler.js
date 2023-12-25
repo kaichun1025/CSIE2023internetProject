@@ -14,9 +14,9 @@ const cookieHandler = {
             username: user.username,
         })
         const sessionExist = await Session.findOne({sessionID: newSession.sessionID})
-        if(sessionExist) {
-            await sessionExist.updateOne
-        }
+        // if(sessionExist) {
+        //     await sessionExist.updateOne()
+        // }
         try {
             await newSession.save()
             return { 'Set-Cookie': `session=${newSession.sessionID}; Expires=${expireDate}; httpOnly=true` }
